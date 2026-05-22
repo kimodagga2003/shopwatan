@@ -1,0 +1,1365 @@
+
+<!DOCTYPE html>  <html lang="ar" dir="rtl">  
+<head>  
+<meta charset="UTF-8" />  
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>  <title>هودي أسود فاخر | متجر وطن</title>  <link rel="preconnect" href="https://fonts.googleapis.com">  
+<link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;700;900&display=swap" rel="stylesheet">  <style>  
+  
+*{  
+margin:0;  
+padding:0;  
+box-sizing:border-box;  
+font-family:'Alexandria',sans-serif;  
+}  
+  
+html{  
+scroll-behavior:smooth;  
+}  
+  
+body{  
+background:#f3f3f3;  
+color:#111;  
+overflow-x:hidden;  
+}  
+  
+::-webkit-scrollbar{  
+width:8px;  
+}  
+  
+::-webkit-scrollbar-thumb{  
+background:#444;  
+border-radius:20px;  
+}  
+  
+/* GLOW */  
+  
+.glow1,  
+.glow2{  
+position:fixed;  
+width:500px;  
+height:500px;  
+border-radius:50%;  
+filter:blur(120px);  
+z-index:-1;  
+}  
+  
+.glow1{  
+background:#ffffff10;  
+top:-100px;  
+left:-100px;  
+}  
+  
+.glow2{  
+background:#ffffff08;  
+bottom:-100px;  
+right:-100px;  
+}  
+  
+/* NAVBAR */  
+  
+nav{  
+position:absolute;  
+top:0;  
+left:0;  
+width:100%;  
+z-index:999;  
+background:transparent;  
+border:none;  
+box-shadow:none;  
+backdrop-filter:none;  
+padding-top:10px;  
+}  
+  
+.nav-container{  
+  
+max-width:1400px;  
+  
+margin:auto;  
+  
+padding:12px 20px;  
+  
+display:flex;  
+flex-direction:column-reverse;  
+  
+align-items:center;  
+justify-content:center;  
+  
+gap:16px;  
+  
+position:relative;  
+z-index:99999;  
+  
+}  
+  
+.logo{  
+font-size:26px;  
+font-weight:900;  
+color:#111;  
+position:relative;  
+z-index:99999;  
+}  
+  
+.nav-links{  
+  
+display:grid;  
+  
+grid-template-columns:repeat(4,1fr);  
+  
+gap:10px;  
+  
+width:100%;  
+  
+max-width:900px;  
+  
+margin:auto;  
+  
+}  
+.nav-links::-webkit-scrollbar{  
+display:none;  
+}  
+  
+.nav-links a{  
+  
+background:#f5efe6;  
+  
+padding:12px 10px;  
+  
+border-radius:18px;  
+  
+color:#111;  
+  
+text-decoration:none;  
+  
+transition:.3s;  
+  
+font-size:14px;  
+font-weight:700;  
+  
+text-align:center;  
+  
+box-shadow:0 6px 18px rgba(0,0,0,.05);  
+  
+border:1px solid rgba(0,0,0,.05);  
+  
+white-space:nowrap;  
+  
+}  
+  
+.nav-links a:hover{  
+  
+background:#111;  
+  
+color:#fff;  
+  
+transform:translateY(-3px);  
+  
+}  
+  
+.nav-links a:active{  
+color:#111;  
+}  
+  
+.nav-links a:focus{  
+color:#111;  
+outline:none;  
+}  
+  
+/* PRODUCT */  
+  
+.product-page{  
+padding:140px 30px 120px;  
+}  
+  
+.product-container{  
+max-width:1400px;  
+margin:auto;  
+  
+display:grid;  
+  
+grid-template-columns:1fr 1fr;  
+  
+gap:60px;  
+  
+align-items:start;  
+justify-content:center;  
+}  
+  
+.product-images{  
+position:sticky;  
+top:120px;  
+  
+margin:auto;  
+  
+display:flex;  
+flex-direction:column;  
+align-items:center;  
+  
+width:100%;  
+}  
+  
+.main-image{  
+position:relative;  
+background:#fff;  
+  
+width:100%;  
+max-width:650px;  
+  
+padding:14px;  
+border-radius:38px;  
+  
+box-shadow:0 20px 50px rgba(0,0,0,.08);  
+  
+margin-bottom:18px;  
+  
+overflow:hidden;  
+}  
+  
+.main-image img{  
+width:100%;  
+display:block;  
+border-radius:28px;  
+transition:.4s ease;  
+}  
+  
+.small-images{  
+display:grid;  
+grid-template-columns:repeat(3,110px);  
+justify-content:center;  
+gap:14px;  
+margin-top:15px;  
+}  
+  
+.small-images::-webkit-scrollbar{  
+display:none;  
+}  
+  
+.thumb{  
+width:110px;  
+height:110px;  
+  
+min-width:110px;  
+max-width:110px;  
+  
+object-fit:cover;  
+aspect-ratio:1/1;  
+  
+display:block;  
+  
+border-radius:22px;  
+cursor:pointer;  
+  
+background:#fff;  
+padding:4px;  
+  
+border:2px solid transparent;  
+  
+transition:.3s;  
+  
+flex-shrink:0;  
+  
+box-shadow:0 8px 20px rgba(0,0,0,.08);  
+}  
+width:110px !important;  
+height:110px !important;  
+  
+min-width:110px;  
+max-width:110px;  
+  
+object-fit:cover;  
+aspect-ratio:1/1;  
+  
+display:block;  
+  
+border-radius:22px;  
+cursor:pointer;  
+padding:0;  
+margin:0;  
+  
+background:#fff;  
+border:2px solid transparent;  
+transition:.35s;  
+  
+box-shadow:0 10px 25px rgba(0,0,0,.08);  
+  
+  
+.thumb:hover{  
+transform:translateY(-6px);  
+border-color:#111;  
+}  
+  
+.thumb.active{  
+border-color:#111;  
+transform:scale(1.04);  
+}  
+  
+.main-image{  
+background:#fff;  
+border-radius:38px;  
+overflow:hidden;  
+box-shadow:0 15px 40px rgba(0,0,0,.08);  
+padding:12px;  
+margin-bottom:18px;  
+}  
+  
+.main-image img{  
+width:100%;  
+display:block;  
+border-radius:30px;  
+transition:.4s;  
+}  
+  
+.small-images{  
+display:grid;  
+grid-template-columns:repeat(3,110px);  
+justify-content:center;  
+gap:14px;  
+margin-top:2px;  
+}  
+  
+.small-images::-webkit-scrollbar{  
+display:none;  
+}  
+  
+  
+  
+.product-info{  
+background:#fff;  
+border:1px solid rgba(0,0,0,.06);  
+border-radius:42px;  
+padding:50px;  
+box-shadow:0 20px 50px rgba(0,0,0,.08);  
+}  
+  
+.product-sub{  
+color:#888;  
+letter-spacing:5px;  
+margin-bottom:18px;  
+font-size:14px;  
+}  
+  
+.product-title{  
+font-size:88px;  
+line-height:.95;  
+font-weight:900;  
+margin-bottom:28px;  
+}  
+  
+.product-text{  
+font-size:21px;  
+line-height:1.9;  
+color:#555;  
+margin-bottom:35px;  
+}  
+  
+.price{  
+font-size:58px;  
+font-weight:900;  
+margin-bottom:35px;  
+}  
+  
+.sizes-title{  
+font-size:18px;  
+margin-bottom:18px;  
+color:#ccc;  
+}  
+  
+.sizes{  
+display:flex;  
+gap:15px;  
+flex-wrap:wrap;  
+margin-bottom:18px;  
+}  
+  
+.size-box{  
+width:90px;  
+height:90px;  
+  
+display:flex;  
+align-items:center;  
+justify-content:center;  
+  
+border-radius:26px;  
+  
+background:#fff;  
+  
+border:2px solid rgba(0,0,0,.08);  
+  
+font-weight:900;  
+font-size:26px;  
+  
+cursor:pointer;  
+  
+transition:.3s;  
+  
+box-shadow:0 10px 25px rgba(0,0,0,.06);  
+}  
+  
+.size-box:hover{  
+transform:translateY(-5px);  
+border-color:#111;  
+}  
+  
+.active-size{  
+background:#111 !important;  
+color:#fff !important;  
+  
+border-color:#111 !important;  
+  
+transform:scale(1.1);  
+  
+box-shadow:0 18px 45px rgba(0,0,0,.28);  
+}  
+  
+.features{  
+display:grid;  
+grid-template-columns:repeat(2,1fr);  
+gap:18px;  
+margin-bottom:45px;  
+}  
+  
+.feature-box{  
+background:#fafafa;  
+border:1px solid rgba(0,0,0,.06);  
+padding:22px;  
+border-radius:24px;  
+line-height:1.8;  
+color:#444;  
+}  
+  
+.buy-btn{  
+background:#fff;  
+color:#000;  
+padding:22px;  
+border-radius:999px;  
+text-decoration:none;  
+font-weight:900;  
+font-size:18px;  
+display:flex;  
+align-items:center;  
+justify-content:center;  
+transition:.35s;  
+margin-bottom:28px;  
+box-shadow:0 15px 40px rgba(255,255,255,.18);  
+}  
+  
+.buy-btn:hover{  
+transform:translateY(-6px) scale(1.02);  
+}  
+.features{  
+margin-top:35px;  
+}  
+.shipping-box{  
+background:#fafafa;  
+border:1px solid rgba(0,0,0,.06);  
+padding:28px;  
+border-radius:28px;  
+line-height:2;  
+color:#555;  
+}  
+/* MOBILE PRODUCT INFO */  
+  
+.mobile-product-info{  
+background:#fff;  
+padding:35px 45px;  
+border-radius:38px;  
+margin-top:-45px;  
+box-shadow:0 15px 40px rgba(0,0,0,.06);  
+}  
+  
+.mobile-product-title{  
+font-size:36px;  
+font-weight:900;  
+margin-bottom:20px;  
+line-height:1.1;  
+  
+  
+}  
+  
+.live-viewers{  
+background:#f8f3eb;  
+padding:15px;  
+border-radius:18px;  
+font-size:17px;  
+margin-bottom:25px;  
+  
+  
+}  
+  
+.product-pricing{  
+display:flex;  
+align-items:center;  
+gap:16px;  
+flex-wrap:wrap;  
+margin-bottom:30px;  
+}  
+  
+.new-price{  
+font-size:42px;  
+font-weight:900;  
+}  
+  
+.old-price{  
+font-size:24px;  
+color:#999;  
+text-decoration:line-through;  
+}  
+  
+.discount{  
+color:#d35400;  
+font-weight:700;  
+font-size:20px;  
+}  
+  
+.active-size{  
+background:#111 !important;  
+color:#fff !important;  
+border-color:#111 !important;  
+}  
+  
+.quantity-box{  
+display:flex;  
+justify-content:space-between;  
+align-items:center;  
+margin:35px 0;  
+gap:20px;  
+}  
+  
+.quantity-title{  
+font-size:20px;  
+font-weight:700;  
+}  
+  
+.quantity-controls{  
+display:flex;  
+align-items:center;  
+gap:25px;  
+background:#fff;  
+border:1px solid rgba(0,0,0,.1);  
+padding:18px 24px;  
+border-radius:18px;  
+}  
+  
+.quantity-controls button{  
+background:none;  
+border:none;  
+font-size:28px;  
+cursor:pointer;  
+}  
+  
+.cart-btn{  
+display:flex;  
+align-items:center;  
+justify-content:center;  
+  
+height:70px;  
+  
+border:2px solid #111;  
+border-radius:18px;  
+  
+text-decoration:none;  
+color:#111;  
+  
+font-size:22px;  
+font-weight:800;  
+  
+margin-bottom:18px;  
+  
+transition:.3s;  
+}  
+  
+.cart-btn:hover{  
+background:#111;  
+color:#fff;  
+}  
+  
+.buy-now-btn{  
+display:flex;  
+align-items:center;  
+justify-content:center;  
+  
+height:72px;  
+  
+background:#111;  
+color:#fff;  
+  
+border-radius:18px;  
+  
+text-decoration:none;  
+  
+font-size:24px;  
+font-weight:900;  
+  
+transition:.3s;  
+}  
+  
+.buy-now-btn:hover{  
+transform:translateY(-4px);  
+}  
+/* REVIEWS */  
+  
+.reviews{  
+padding:0 30px 120px;  
+}  
+  
+.reviews-container{  
+max-width:1400px;  
+margin:auto;  
+}  
+  
+.section-title{  
+text-align:center;  
+margin-bottom:70px;  
+}  
+  
+.section-title p{  
+color:#888;  
+letter-spacing:5px;  
+margin-bottom:15px;  
+}  
+  
+.section-title h2{  
+font-size:70px;  
+font-weight:900;  
+}  
+  
+.reviews-grid{  
+display:grid;  
+grid-template-columns:repeat(3,1fr);  
+gap:25px;  
+}  
+  
+.review-card{  
+background:#fff;  
+border:1px solid rgba(0,0,0,.06);  
+padding:40px;  
+border-radius:35px;  
+transition:.35s;  
+box-shadow:0 10px 30px rgba(0,0,0,.05);  
+}  
+  
+.review-card:hover{  
+transform:translateY(-10px);  
+box-shadow:0 20px 50px rgba(0,0,0,.45);  
+}  
+  
+.review-stars{  
+font-size:24px;  
+margin-bottom:20px;  
+}  
+  
+.review-card p{  
+color:#ccc;  
+line-height:1.9;  
+margin-bottom:30px;  
+}  
+  
+/* FOOTER */  
+  
+footer{  
+border-top:1px solid rgba(255,255,255,.08);  
+padding:50px 30px;  
+}  
+  
+.footer-container{  
+max-width:1400px;  
+margin:auto;  
+display:flex;  
+justify-content:space-between;  
+align-items:center;  
+flex-wrap:wrap;  
+gap:20px;  
+}  
+  
+.footer-text{  
+color:#777;  
+margin-top:10px;  
+font-size:15px;  
+line-height:1.7;  
+}  
+  
+.social-icons{  
+display:flex;  
+gap:18px;  
+align-items:center;  
+}  
+  
+.social{  
+width:62px;  
+height:62px;  
+border-radius:50%;  
+display:flex;  
+align-items:center;  
+justify-content:center;  
+backdrop-filter:blur(20px);  
+border:1px solid rgba(255,255,255,.1);  
+background:rgba(255,255,255,.06);  
+transition:.35s;  
+box-shadow:0 0 20px rgba(255,255,255,.05);  
+}  
+  
+.social:hover{  
+transform:translateY(-8px) scale(1.08);  
+border-color:#fff;  
+}  
+  
+.social img{  
+width:28px;  
+height:28px;  
+object-fit:contain;  
+}  
+  
+/* PAYMENT */  
+  
+.payment-section{  
+padding:70px 30px;  
+text-align:center;  
+border-top:1px solid rgba(255,255,255,.08);  
+background:linear-gradient(to bottom,#050505,#000);  
+box-shadow:0 -10px 40px rgba(0,0,0,.6);  
+}  
+  
+.payment-section h3{  
+font-size:32px;  
+margin-bottom:35px;  
+font-weight:800;  
+  
+color:#fff;  
+}  
+  
+.payment-icons{  
+display:flex;  
+justify-content:center;  
+align-items:center;  
+gap:18px;  
+flex-wrap:wrap;  
+margin-bottom:25px;  
+}  
+  
+.payment-icons img{  
+width:75px;  
+height:50px;  
+object-fit:contain;  
+background:#fff;  
+padding:10px;  
+border-radius:14px;  
+transition:.3s;  
+}  
+  
+.payment-icons img:hover{  
+transform:translateY(-5px);  
+}  
+  
+.payment-text{  
+color:#888;  
+font-size:16px;  
+}  
+  
+/* WHATSAPP */  
+  
+.whatsapp{  
+position:fixed;  
+left:25px;  
+bottom:25px;  
+width:75px;  
+height:75px;  
+border-radius:50%;  
+background:#25D366;  
+display:flex;  
+align-items:center;  
+justify-content:center;  
+box-shadow:0 0 30px #25D36688;  
+z-index:999;  
+transition:.3s;  
+}  
+  
+.whatsapp:hover{  
+transform:scale(1.1);  
+}  
+  
+.whatsapp img{  
+width:38px;  
+}  
+.slider-btn{  
+position:absolute;  
+top:50%;  
+transform:translateY(-50%);  
+  
+width:42px;  
+height:42px;  
+  
+border:none;  
+border-radius:50%;  
+  
+background:rgba(255,255,255,.92);  
+color:#111;  
+  
+font-size:22px;  
+font-weight:900;  
+  
+display:flex;  
+align-items:center;  
+justify-content:center;  
+  
+cursor:pointer;  
+  
+z-index:50;  
+  
+box-shadow:0 8px 20px rgba(0,0,0,.10);  
+  
+transition:.3s;  
+}  
+  
+border:none;  
+border-radius:50%;  
+  
+background:rgba(255,255,255,.96);  
+color:#111;  
+  
+font-size:28px;  
+font-weight:900;  
+  
+display:flex;  
+align-items:center;  
+justify-content:center;  
+  
+cursor:pointer;  
+  
+z-index:50;  
+  
+box-shadow:0 10px 25px rgba(0,0,0,.12);  
+  
+transition:.3s;  
+}  
+  
+.slider-btn:hover{  
+transform:translateY(-50%) scale(1.08);  
+}  
+  
+.prev{  
+left:-10px;  
+}  
+  
+.next{  
+right:-10px;  
+}  
+/* STOCK */  
+  
+.stock-counter{  
+background:#fff3e8;  
+color:#d35400;  
+padding:18px;  
+border-radius:18px;  
+font-size:18px;  
+font-weight:700;  
+margin-bottom:30px;  
+  
+  
+  
+animation:pulse 1.8s infinite;  
+}  
+  
+@keyframes pulse{  
+  
+0%{  
+transform:scale(1);  
+}  
+  
+50%{  
+transform:scale(1.03);  
+}  
+  
+100%{  
+transform:scale(1);  
+}  
+  
+}  
+  
+/* STICKY BUY */  
+  
+.sticky-buy{  
+position:fixed;  
+bottom:0;  
+left:0;  
+width:100%;  
+padding:15px;  
+background:#ffffffee;  
+backdrop-filter:blur(20px);  
+z-index:999999;  
+box-shadow:0 -10px 30px rgba(0,0,0,.08);  
+}  
+  
+.sticky-buy a{  
+height:65px;  
+background:#111;  
+border-radius:18px;  
+display:flex;  
+align-items:center;  
+justify-content:center;  
+text-decoration:none;  
+color:#fff;  
+font-size:22px;  
+font-weight:900;  
+}  
+  
+/* SIZE ACTIVE */  
+  
+.active-size{  
+background:#111 !important;  
+color:#fff !important;  
+border-color:#111 !important;  
+}  
+/* FULLSCREEN */  
+  
+.fullscreen-view{  
+position:fixed;  
+top:0;  
+left:0;  
+width:100%;  
+height:100%;  
+background:rgba(0,0,0,.96);  
+z-index:99999999;  
+  
+display:none;  
+align-items:center;  
+justify-content:center;  
+padding:20px;  
+}  
+  
+.fullscreen-view img{  
+width:100%;  
+max-width:900px;  
+border-radius:25px;  
+animation:zoomIn .35s ease;  
+}  
+  
+.fullscreen-view span{  
+position:absolute;  
+top:30px;  
+right:30px;  
+font-size:45px;  
+color:#fff;  
+cursor:pointer;  
+}  
+  
+@keyframes zoomIn{  
+  
+from{  
+transform:scale(.8);  
+opacity:0;  
+}  
+  
+to{  
+transform:scale(1);  
+opacity:1;  
+}  
+  
+}  
+/* MOBILE */  
+  
+@media(max-width:1000px){  
+  
+.product-container,  
+.reviews-grid,  
+.features{  
+grid-template-columns:1fr;  
+}  
+  
+.product-title{  
+font-size:58px;  
+}  
+  
+.section-title h2{  
+font-size:42px;  
+}  
+  
+.nav-links{  
+display:flex;  
+gap:18px;  
+flex-wrap:wrap;  
+justify-content:center;  
+}  
+.nav-links a{  
+font-size:13px;  
+}  
+.product-images{  
+position:relative;  
+top:0;  
+}  
+  
+}  
+  
+</style>  </head>  <body>  <div class="glow1"></div>  
+<div class="glow2"></div>  <!-- NAVBAR -->  <nav>  <div class="nav-container">  <div class="logo">  
+متجر وطن  
+</div>  <div class="nav-links">  
+<a href="index.html">الرئيسية</a>  <a href="#reviews">التقييمات</a>
+
+<a href="#footer">تواصل معنا</a>
+
+</div>  </div>  </nav>  <!-- PRODUCT -->  <section class="product-page">  <div class="product-container">  <div class="product-images">  <div class="main-image">  <button class="slider-btn prev" onclick="prevImage()">  
+❮  
+</button>  <img
+id="mainProductImage"
+onclick="openFullscreen(this.src)"
+src="https://i.ibb.co/Nd0NTmJL/file-00000000564471f783f202b4f842d771.png"
+
+> 
+
+<button class="slider-btn next" onclick="nextImage()">  
+❯  
+</button>  </div>  <div class="small-images">  <img
+class="thumb"
+src="https://i.ibb.co/Nd0NTmJL/file-00000000564471f783f202b4f842d771.png"
+onclick="changeImage(this)"
+
+> 
+
+<img
+class="thumb"
+src="https://i.ibb.co/sdhrq175/file-00000000530471f78ed67f7073d56f6b.png"
+onclick="changeImage(this)"
+
+> 
+
+<img
+class="thumb"
+src="https://i.ibb.co/Nd0NTmJL/file-00000000564471f783f202b4f842d771.png"
+onclick="changeImage(this)"
+
+> 
+
+</div>  </div>  
+<div class="mobile-product-info">  <h2 class="mobile-product-title">  
+طقم بولو فاخر  
+</h2>  <div class="live-viewers">  
+👁 يوجد 72 شخص يشاهد هذا المنتج الآن  
+</div>  <div class="product-pricing">  
+<div class="stock-counter">  
+🔥 متبقي فقط 20 قطعة بالمخزون  
+</div>  
+<div class="new-price">  
+₪50  
+</div>  <div class="old-price">  
+₪250  
+</div>  <div class="discount">  
+وفر ₪200  
+</div>  </div>  <div class="sizes-title">  
+اختر المقاس  
+</div>
+
+<div class="sizes">
+
+<div class="size-box active-size" onclick="selectSize(this)">XS</div>
+
+<div class="size-box" onclick="selectSize(this)">S</div>
+
+<div class="size-box" onclick="selectSize(this)">M</div>
+
+<div class="size-box" onclick="selectSize(this)">L</div>
+
+<div class="size-box" onclick="selectSize(this)">XL</div>
+
+<div class="size-box" onclick="selectSize(this)">2XL</div>
+
+<div class="size-box" onclick="selectSize(this)">3XL</div>
+
+
+<div class="quantity-box">
+
+<span class="quantity-title">
+الكمية
+</span>
+
+<div class="quantity-controls">
+
+<button onclick="decreaseQty()">
+−
+</button>
+
+<span id="quantity">
+1
+</span>
+
+<button onclick="increaseQty()">
++
+</button>
+
+</div>
+
+</div>
+
+<button class="buy-now-btn" onclick="buyNow()">
+
+<span class="buy-icon">
+🛍
+</span>
+
+اشتري الآن
+
+</button> <div class="features">  <div class="feature-box">  
+✔ خامة ثقيلة ومريحة للاستخدام اليومي  
+</div>  <div class="feature-box">  
+✔ تصميم oversized عصري ومميز  
+</div>  <div class="feature-box">  
+✔ توصيل سريع للداخل والضفة  
+</div>  <div class="feature-box">  
+✔ ستايل clean يناسب كل الطلعات  
+</div>  </div>  <div class="shipping-box">  
+التوصيل متوفر لجميع مناطق الداخل والضفة خلال يومي عمل فقط.  
+الدفع متوفر بسهولة عبر بطاقتك البنكية بكل أمان وسرعة.  
+</div>  </div>  </div>  </section>  <!-- REVIEWS -->  <section class="reviews" id="reviews">  <div class="reviews-container">  <div class="section-title">  
+<p>  
+آراء العملاء  
+</p>  <h2>  
+شو بحكوا عنا  
+</h2>  
+</div>  <div class="reviews-grid">  <div class="review-card">  
+<div class="review-stars">★★★★★</div>  
+<p>  
+الخامة كثير مرتبة والقياس طلع ممتاز، بصراحة أول مرة بطلب أونلاين وبطلع هيك.  
+</p>  
+<strong>  
+كريم — حيفا  
+</strong>  
+</div>  <div class="review-card">  
+<div class="review-stars">★★★★★</div>  
+<p>  
+وصل الطلب بسرعة والتغليف مرتب جدًا، والقطعة أفخم من الصور بصراحة.  
+</p>  
+<strong>  
+يزن — القدس  
+</strong>  
+</div>  <div class="review-card">  
+<div class="review-stars">★★★★★</div>  
+<p>  
+ستايل clean وخامة مريحة جدًا، لبسته أكثر من مرة ولسه كأنه جديد.  
+</p>  
+<strong>  
+حمزة — جنين  
+</strong>  
+</div>  
+<div class="review-card">  
+<div class="review-stars">★★★★★</div>  
+<p>  
+الخامة فخمة جدًا والقطعة طلعت أحلى من الصور، أكيد مش آخر طلب.  
+</p>  
+<strong>  
+محمد — الناصرة  
+</strong>  
+</div>  <div class="review-card">  
+<div class="review-stars">★★★★★</div>  
+<p>  
+وصلني الطلب خلال يومين والتغليف كثير مرتب، واضح إنه متجر احترافي.  
+</p>  
+<strong>  
+آدم — رام الله  
+</strong>  
+</div>  <div class="review-card">  
+<div class="review-stars">★★★★★</div>  
+<p>  
+القياسات دقيقة جدًا والخامة مريحة بشكل رهيب، كثير أنصح فيه.  
+</p>  
+<strong>  
+ليث — أم الفحم  
+</strong>  
+</div>  
+</div>  </div>  </div>  </section>  <!-- FOOTER -->  <footer id="footer">  <div class="footer-container">  <div>  <div class="logo">  
+وطن  
+</div>  <p class="footer-text">  
+متجر ستريت وير فاخر مستوحى من أفخم البراندات العالمية  
+</p>  </div>  <div class="social-icons">  <a href="https://www.instagram.com/karimabudagga2003?igsh=dTd5Znp1bjEyY2p2" target="_blank" class="social">  
+<img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">  
+</a>  <a href="https://www.facebook.com/share/1TbCkiKvre/" target="_blank" class="social">  
+<img src="https://cdn-icons-png.flaticon.com/512/733/733547.png">  
+</a>  <a href="https://wa.me/31641531486" target="_blank" class="social">  
+<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">  
+</a>  </div>  </div>  </footer>  <!-- PAYMENT -->  <div class="payment-section">  <h3>  
+طرق الدفع المتوفرة  
+</h3>  <div class="payment-icons">  <img src="https://cdn-icons-png.flaticon.com/512/196/196578.png">  
+<img src="https://cdn-icons-png.flaticon.com/512/5968/5968144.png">  
+<img src="https://cdn-icons-png.flaticon.com/512/349/349221.png">  
+<img src="https://i.ibb.co/Myb0Y95w/Bank-of-Palestine-Logo-2012-boxed-variant-s1280.avif">  
+<img src="https://i.ibb.co/b57NdFgc/Mastercard-Logo-2019-s1280.avif">  </div>  <p class="payment-text">  
+دفع آمن وسريع لجميع مناطق الداخل والضفة  
+</p>  </div>  <!-- WHATSAPP -->  <a
+href="https://wa.me/31641531486"
+class="whatsapp"
+
+> 
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">  <script>  
+  
+const images = [  
+  
+"https://i.ibb.co/Nd0NTmJL/file-00000000564471f783f202b4f842d771.png",  
+  
+"https://i.ibb.co/sdhrq175/file-00000000530471f78ed67f7073d56f6b.png",  
+  
+"https://i.ibb.co/Nd0NTmJL/file-00000000564471f783f202b4f842d771.png"  
+  
+];  
+  
+let currentImage = 0;  
+  
+/* تغيير الصورة */  
+  
+function changeImage(element){  
+  
+document.getElementById("mainProductImage").src = element.src;  
+  
+document.querySelectorAll(".thumb").forEach(img=>{  
+  
+img.classList.remove("active");  
+  
+});  
+  
+element.classList.add("active");  
+  
+currentImage =  
+[...document.querySelectorAll(".thumb")].indexOf(element);  
+  
+}  
+  
+/* الصورة التالية */  
+  
+function nextImage(){  
+  
+currentImage++;  
+  
+if(currentImage >= images.length){  
+  
+currentImage = 0;  
+  
+}  
+  
+updateSlider();  
+  
+}  
+  
+/* الصورة السابقة */  
+  
+function prevImage(){  
+  
+currentImage--;  
+  
+if(currentImage < 0){  
+  
+currentImage = images.length - 1;  
+  
+}  
+  
+updateSlider();  
+  
+}  
+  
+/* تحديث الصور */  
+  
+function updateSlider(){  
+  
+document.getElementById("mainProductImage").src =  
+images[currentImage];  
+  
+document.querySelectorAll(".thumb").forEach((img,index)=>{  
+  
+img.classList.remove("active");  
+  
+if(index === currentImage){  
+  
+img.classList.add("active");  
+  
+}  
+  
+});  
+  
+}  
+  
+/* تبديل تلقائي */  
+  
+setInterval(()=>{  
+  
+nextImage();  
+  
+},4000);  
+  
+/* الكمية */  
+  
+let quantity = 1;  
+  
+function increaseQty(){  
+  
+quantity++;  
+  
+document.getElementById("quantity").innerText = quantity;  
+  
+}  
+  
+function decreaseQty(){  
+  
+if(quantity > 1){  
+  
+quantity--;  
+  
+document.getElementById("quantity").innerText = quantity;  
+  
+}  
+  
+}  
+  
+/* اختيار المقاس */  
+  
+function selectSize(element){  
+  
+document.querySelectorAll(".size-box").forEach(size=>{  
+  
+size.classList.remove("active-size");  
+  
+});  
+  
+element.classList.add("active-size");  
+  
+}  
+  
+/* fullscreen */
+
+function openFullscreen(src){
+
+document.getElementById("fullscreenView").style.display = "flex";
+
+document.getElementById("fullscreenImage").src = src;
+
+}
+
+/* شراء المنتج */
+
+function buyNow(){
+
+const selectedSize =
+document.querySelector(".size-box.active-size");
+
+if(!selectedSize){
+
+alert("يرجى اختيار المقاس أولاً");
+
+return;
+
+}
+
+window.location.href = "checkout.html";
+
+}
+
+/* اغلاق الصورة */
+
+function closeFullscreen(){
+
+document.getElementById("fullscreenView").style.display = "none";
+
+}
+  
+</script> 
+
+<div class="fullscreen-view" id="fullscreenView">  <span onclick="closeFullscreen()">  
+✕  
+</span>  <img id="fullscreenImage">  </div>  
+</body>  
+</html>
